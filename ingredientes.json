@@ -31,8 +31,8 @@
             ]
         },
         "wiki": {
-            "pt": "https://pt.wikipedia.org/wiki/Quartzo",
-            "en": "https://en.wikipedia.org/wiki/Quartz"
+            "pt": "Quartzo",
+            "en": "Quartz"
         }
         
     },
@@ -68,8 +68,8 @@
             ]
         },
         "wiki": {
-            "pt": "https://pt.wikipedia.org/wiki/Carbonato_de_cálcio",
-            "en": "https://en.wikipedia.org/wiki/Calcium_carbonate"
+            "pt": "Carbonato_de_cálcio",
+            "en": "Calcium_carbonate"
         }
     },
     {
@@ -107,8 +107,8 @@
             ]
         },
         "wiki": {
-            "pt": "https://pt.wikipedia.org/wiki/Albita",
-            "en": "https://en.wikipedia.org/wiki/Albite"
+            "pt": "Albita",
+            "en": "Albite"
         }
     },
     {
@@ -146,8 +146,8 @@
             ]
         },
         "wiki": {
-            "pt": "https://pt.wikipedia.org/wiki/Feldspato",
-            "en": "https://en.wikipedia.org/wiki/Feldspar"
+            "pt": "Feldspato",
+            "en": "Feldspar"
         }
     },
     {
@@ -182,8 +182,8 @@
             ]
         },
         "wiki": {
-            "pt": "https://pt.wikipedia.org/wiki/Caulinita",
-            "en": "https://en.wikipedia.org/wiki/Kaolinite"
+            "pt": "Caulinita",
+            "en": "Kaolinite"
         }
     }
 ]
