@@ -31,7 +31,37 @@ class Receita:
         print("Receita para 4,5 Kg")
 
 class Ingredientes:
-    def imprime_ingredientes(formato="curto"):
+    def imprime_ingrediente(ingrediente, formato="curto"):
+        # Versão simples
+        print(u"{}) {} [{}]".format(
+                ingrediente["id"],
+                ingrediente["nome"][0].capitalize(), 
+                ingrediente["formula"][1]
+            ))
+        # Versão completa
+        if formato == "longo":
+            # Temperatura de fusão
+            temps_fusao = ingrediente["temperatura"]["fusao"]
+            print("\n   - Temperatura de Fusão: ", end="")
+            for t in temps_fusao:
+                # Valores
+                valores = t["valor"]
+                if len(valores) == 2:
+                    print("\n     - {}-{}".format(
+                        valores[0], valores[1]
+                    ), end =" ")
+                else:
+                    print("\n     - " + str(valores[0]), end=" ")
+                # Sistema (°C, °F ou K)
+                if t["sistema"] == "K":
+                    print(t["sistema"], end="")
+                else:
+                    print(t["sistema"], end=", ")
+            # Wikipedia URL
+            wiki = ingrediente["wiki"]
+            print("\n\n   - {}".format(wiki["pt"]))
+
+    def listar_ingredientes(formato="curto"):
         with open("ingredientes.json", "r") as fh:
             json_str = fh.read()
             json_value = json.loads(json_str)
@@ -40,36 +70,13 @@ class Ingredientes:
         for i in range(0, len(ingredientes)):
             if i != 0 and formato == "longo":
                 print()
-
             ingrediente = ingredientes[i]
-            print(u"{}) {} [{}]".format(
-                ingrediente["id"],
-                ingrediente["nome"][0].capitalize(), 
-                ingrediente["formula"][1]
-            ))
             if formato == "longo":
-                # Temperatura de fusão
-                temps_fusao = ingrediente["temperatura"]["fusao"]
-                print("\n   - Temperatura de Fusão: ", end="")
-                for t in temps_fusao:
-                    #valores
-                    valores = t["valor"]
-                    if len(valores) == 2:
-                        print("\n     - {}-{}".format(
-                            valores[0], valores[1]
-                        ), end =" ")
-                    else:
-                        print("\n     - " + str(valores[0]), end=" ")
-                    #sistema
-                    if t["sistema"] == "K":
-                        print(t["sistema"], end="")
-                    else:
-                        print(t["sistema"], end=", ")
-                # Wikipedia URL
-                wiki = ingrediente["wiki"]
-                print("\n\n   - {}".format(wiki["pt"]))
+                Ingredientes.imprime_ingrediente(ingrediente, "longo")
+            else:
+                Ingredientes.imprime_ingrediente(ingrediente)
 
-Ingredientes.imprime_ingredientes()
+Ingredientes.listar_ingredientes()
 print()
-Ingredientes.imprime_ingredientes("longo")
+Ingredientes.listar_ingredientes("longo")
 # Receita.le_receitas()
