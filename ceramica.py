@@ -30,23 +30,22 @@ class Receita:
         print("Receita para 4,5 Kg")
 
 class Ingredientes:
-    def imprime_ingredientes(longo="curto"):
+    def imprime_ingredientes(formato="curto"):
         with open("ingredientes.json", "r") as fh:
             json_str = fh.read()
             json_value = json.loads(json_str)
         ingredientes = json_value
         
         for i in range(0, len(ingredientes)):
-            if i != 0 and longo == "longo":
+            if i != 0 and formato == "longo":
                 print()
             print(u"{}) {} ({})".format(
                 ingredientes[i]["id"],
                 ingredientes[i]["nome"][0].capitalize(), 
                 ingredientes[i]["formula"][1]
             ))
-            if longo == "longo":
-                print("  - Para maiores informações, acessar:")
-                print(u"    - {}".format(ingredientes[i]["wiki"]["pt"]))
+            if formato == "longo":
+                print(u"   - {}".format(ingredientes[i]["wiki"]["pt"]))
 
 Ingredientes.imprime_ingredientes()
 print()
