@@ -10,7 +10,26 @@
             "SiO\u2082"
         ],
         "temperatura": {
-            "fusao": ""
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1710
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        3110
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1983
+                    ]
+                }
+            ]
         },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Quartzo",
@@ -29,7 +48,26 @@
             "NaAlSi\u2083O\u2088"
         ],
         "temperatura": {
-            "fusao": ""
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1339
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        2442
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1612
+                    ]
+                }
+            ]
         },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Carbonato_de_cálcio",
@@ -47,7 +85,29 @@
             "NaAlSi\u2083O\u2088"
         ],
         "temperatura": {
-            "fusao": ""
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1100,
+                        1120
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        2012,
+                        2048
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1373,
+                        1393
+                    ]
+                }
+            ]
         },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Albita",
@@ -65,7 +125,29 @@
             "NaAlSi\u2083O\u2088"
         ],
         "temperatura": {
-            "fusao": ""
+            "fusão": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1200,
+                        1250
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        2192,
+                        2282
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1473,
+                        1523
+                    ]
+                }
+            ]
         },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Feldspato",
@@ -83,7 +165,26 @@
             "Al\u2082Si\u2082O\u2085(OH)\u2084"
         ],
         "temperatura": {
-            "fusao": ""
+            "fusão": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1770
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        3218
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        2043
+                    ]
+                }
+            ]
         },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Caulinita",
