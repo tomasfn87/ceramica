@@ -6,7 +6,7 @@
         ],
         "formula": [
             "SiO2",
-            "SiO\u00002082"
+            "SiO\u2082"
         ],
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Quartzo",
@@ -21,10 +21,10 @@
         ],
         "formula": [
             "NaAlSi3O8",
-            "NaAlSi\u00002083O\u00002088"
+            "NaAlSi\u2083O\u2088"
         ],
         "wiki": {
-            "pt": "https://pt.wikipedia.org/wiki/Carbonato_de_c%C3%A1lcio",
+            "pt": "https://pt.wikipedia.org/wiki/Carbonato_de_cálcio",
             "en": "https://en.wikipedia.org/wiki/Calcium_carbonate"
         }
     },
@@ -35,7 +35,7 @@
         ],
         "formula": [
             "NaAlSi3O8",
-            "NaAlSi\u00002083O\u00002088"
+            "NaAlSi\u2083O\u2088"
         ],
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Albita",
@@ -49,7 +49,7 @@
         ],
         "formula": [
             "NaAlSi3O8",
-            "NaAlSi\u00002083O\u00002088"
+            "NaAlSi\u2083O\u2088"
         ],
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Feldspato",
@@ -63,7 +63,7 @@
         ],
         "formula": [
             "Al2Si2O5(OH)4",
-            "Al\u00002082Si\u00002082O\u00002085(OH)\u00002084"
+            "Al\u2082Si\u2082O\u2085(OH)\u2084"
         ],
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Caulinita",
