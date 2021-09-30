@@ -1,4 +1,5 @@
 import json
+import texto as T
 
 class Receita:
     def __init__(self, ingredientes, porcentagens):
@@ -39,13 +40,34 @@ class Ingredientes:
         for i in range(0, len(ingredientes)):
             if i != 0 and formato == "longo":
                 print()
-            print(u"{}) {} ({})".format(
-                ingredientes[i]["id"],
-                ingredientes[i]["nome"][0].capitalize(), 
-                ingredientes[i]["formula"][1]
+
+            ingrediente = ingredientes[i]
+            print(u"{}) {} [{}]".format(
+                ingrediente["id"],
+                ingrediente["nome"][0].capitalize(), 
+                ingrediente["formula"][1]
             ))
             if formato == "longo":
-                print(u"   - {}".format(ingredientes[i]["wiki"]["pt"]))
+                # Temperatura de fusão
+                temps_fusao = ingrediente["temperatura"]["fusao"]
+                print("\n   - Temperatura de Fusão: ", end="")
+                for t in temps_fusao:
+                    #valores
+                    valores = t["valor"]
+                    if len(valores) == 2:
+                        print("\n     - {}-{}".format(
+                            valores[0], valores[1]
+                        ), end =" ")
+                    else:
+                        print("\n     - " + str(valores[0]), end=" ")
+                    #sistema
+                    if t["sistema"] == "K":
+                        print(t["sistema"], end="")
+                    else:
+                        print(t["sistema"], end=", ")
+                # Wikipedia URL
+                wiki = ingrediente["wiki"]
+                print("\n\n   - {}".format(wiki["pt"]))
 
 Ingredientes.imprime_ingredientes()
 print()
