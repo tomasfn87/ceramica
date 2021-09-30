@@ -6,8 +6,7 @@
             "sílica"
         ],
         "formula": [
-            "SiO2",
-            "SiO\u2082"
+            "SiO2"
         ],
         "temperatura": {
             "fusao": [
@@ -44,8 +43,7 @@
             "calcita"
         ],
         "formula": [
-            "NaAlSi3O8",
-            "NaAlSi\u2083O\u2088"
+            "CaCO3"
         ],
         "temperatura": {
             "fusao": [
@@ -81,8 +79,7 @@
             "feldspato sódico"
         ],
         "formula": [
-            "NaAlSi3O8",
-            "NaAlSi\u2083O\u2088"
+            "NaAlSi3O8"
         ],
         "temperatura": {
             "fusao": [
@@ -121,8 +118,7 @@
             "feldspato potássico"
         ],
         "formula": [
-            "NaAlSi3O8",
-            "NaAlSi\u2083O\u2088"
+            "KAlSi3O8"
         ],
         "temperatura": {
             "fusao": [
@@ -161,8 +157,7 @@
             "caulinita"
         ],
         "formula": [
-            "Al2Si2O5(OH)4",
-            "Al\u2082Si\u2082O\u2085(OH)\u2084"
+            "Al2Si2O5(OH)4"
         ],
         "temperatura": {
             "fusao": [
