@@ -9,6 +9,9 @@
             "SiO2",
             "SiO\u2082"
         ],
+        "temperatura": {
+            "fusao": ""
+        },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Quartzo",
             "en": "https://en.wikipedia.org/wiki/Quartz"
@@ -25,6 +28,9 @@
             "NaAlSi3O8",
             "NaAlSi\u2083O\u2088"
         ],
+        "temperatura": {
+            "fusao": ""
+        },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Carbonato_de_cálcio",
             "en": "https://en.wikipedia.org/wiki/Calcium_carbonate"
@@ -40,6 +46,9 @@
             "NaAlSi3O8",
             "NaAlSi\u2083O\u2088"
         ],
+        "temperatura": {
+            "fusao": ""
+        },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Albita",
             "en": "https://en.wikipedia.org/wiki/Albite"
@@ -55,6 +64,9 @@
             "NaAlSi3O8",
             "NaAlSi\u2083O\u2088"
         ],
+        "temperatura": {
+            "fusao": ""
+        },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Feldspato",
             "en": "https://en.wikipedia.org/wiki/Feldspar"
@@ -70,6 +82,9 @@
             "Al2Si2O5(OH)4",
             "Al\u2082Si\u2082O\u2085(OH)\u2084"
         ],
+        "temperatura": {
+            "fusao": ""
+        },
         "wiki": {
             "pt": "https://pt.wikipedia.org/wiki/Caulinita",
             "en": "https://en.wikipedia.org/wiki/Kaolinite"
