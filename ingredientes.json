@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "nome": [
             "quartzo",
             "sílica"
@@ -15,6 +16,7 @@
         
     },
     {
+        "id": "2",
         "nome": [
             "carbonato de cálcio",
             "calcita"
@@ -29,6 +31,7 @@
         }
     },
     {
+        "id": "3",
         "nome": [
             "albita",
             "feldspato sódico"
@@ -43,6 +46,7 @@
         }
     },
     {
+        "id": "4",
         "nome": [
             "feldspato",
             "feldspato potássico"
@@ -57,6 +61,7 @@
         }
     },
     {
+        "id": "5",
         "nome": [
             "caulim",
             "caulinita"
