@@ -56,17 +56,17 @@ class Ingredientes:
                 if len(valores) == 2:
                     print(end=" ")
                     if id_valor == 0:
-                        print("           entre:", end=" ")
+                        print("            entre:", end=" ")
                     else:
-                        print("                 ", end=" ")
+                        print("                  ", end=" ")
                     print("- {} e {}".format(
                         valores[0], valores[1]
                     ), end =" ")
                 else:
                     if id_valor == 0:
-                        print("      a partir de:", end=" ")
+                        print("              a partir de:", end=" ")
                     else:
-                        print("                  ", end=" ")
+                        print("                          ", end=" ")
                     print("- " + str(valores[0]), end=" ")
                 # Sistema (°C, °F ou K)
                 if t["sistema"] == "K":
@@ -76,7 +76,10 @@ class Ingredientes:
                 id_valor += 1
             # Wikipedia URL
             wiki = ingrediente["wiki"]
-            print("\n\n     Acessar: {}".format(wiki["pt"]))
+            print("\n  Acessar: ")
+            for w in wiki:
+                print("         - {}.wikipedia.org/{}".format(w, wiki[w]))
+            
 
     def listar_ingredientes(formato="curto"):
         with open("ingredientes.json", "r") as fh:
