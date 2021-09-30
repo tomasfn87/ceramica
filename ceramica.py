@@ -22,7 +22,7 @@ class Receita:
         p = [20, 80]
         assert p.extend() >= 100 \
             and p.extend() <= 115
-        receita = Receita()
+        receita = Receita(i, p)
     
     def seleciona_ingredientes():
         Ingredientes.imprime_ingredientes()
