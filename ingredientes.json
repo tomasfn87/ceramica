@@ -1,0 +1,73 @@
+[
+    {
+        "nome": [
+            "quartzo",
+            "sílica"
+        ],
+        "formula": [
+            "SiO2",
+            "SiO\u00002082"
+        ],
+        "wiki": {
+            "pt": "https://pt.wikipedia.org/wiki/Quartzo",
+            "en": "https://en.wikipedia.org/wiki/Quartz"
+        }
+        
+    },
+    {
+        "nome": [
+            "carbonato de cálcio",
+            "calcita"
+        ],
+        "formula": [
+            "NaAlSi3O8",
+            "NaAlSi\u00002083O\u00002088"
+        ],
+        "wiki": {
+            "pt": "https://pt.wikipedia.org/wiki/Carbonato_de_c%C3%A1lcio",
+            "en": "https://en.wikipedia.org/wiki/Calcium_carbonate"
+        }
+    },
+    {
+        "nome": [
+            "albita",
+            "feldspato sódico"
+        ],
+        "formula": [
+            "NaAlSi3O8",
+            "NaAlSi\u00002083O\u00002088"
+        ],
+        "wiki": {
+            "pt": "https://pt.wikipedia.org/wiki/Albita",
+            "en": "https://en.wikipedia.org/wiki/Albite"
+        }
+    },
+    {
+        "nome": [
+            "feldspato",
+            "feldspato potássico"
+        ],
+        "formula": [
+            "NaAlSi3O8",
+            "NaAlSi\u00002083O\u00002088"
+        ],
+        "wiki": {
+            "pt": "https://pt.wikipedia.org/wiki/Feldspato",
+            "en": "https://en.wikipedia.org/wiki/Feldspar"
+        }
+    },
+    {
+        "nome": [
+            "caulim",
+            "caulinita"
+        ],
+        "formula": [
+            "Al2Si2O5(OH)4",
+            "Al\u00002082Si\u00002082O\u00002085(OH)\u00002084"
+        ],
+        "wiki": {
+            "pt": "https://pt.wikipedia.org/wiki/Caulinita",
+            "en": "https://en.wikipedia.org/wiki/Kaolinite"
+        }
+    }
+]
