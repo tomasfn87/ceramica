@@ -40,26 +40,43 @@ class Ingredientes:
             ))
         # Versão completa
         if formato == "longo":
+            # ou:
+            if len(ingrediente["nome"]) > 1:
+                print("   ou: {}".format(
+                    ingrediente["nome"][1].capitalize()
+                ))
             # Temperatura de fusão
             temps_fusao = ingrediente["temperatura"]["fusao"]
-            print("\n   - Temperatura de Fusão: ", end="")
+            print("   - Temperatura de Fusão: ", end="")
+            id_valor = 0
             for t in temps_fusao:
                 # Valores
                 valores = t["valor"]
+                print()
                 if len(valores) == 2:
-                    print("\n     - {}-{}".format(
+                    print(end=" ")
+                    if id_valor == 0:
+                        print("           entre:", end=" ")
+                    else:
+                        print("                 ", end=" ")
+                    print("- {} e {}".format(
                         valores[0], valores[1]
                     ), end =" ")
                 else:
-                    print("\n     - " + str(valores[0]), end=" ")
+                    if id_valor == 0:
+                        print("      a partir de:", end=" ")
+                    else:
+                        print("                  ", end=" ")
+                    print("- " + str(valores[0]), end="")
                 # Sistema (°C, °F ou K)
                 if t["sistema"] == "K":
                     print(t["sistema"], end="")
                 else:
                     print(t["sistema"], end=", ")
+                id_valor += 1
             # Wikipedia URL
             wiki = ingrediente["wiki"]
-            print("\n\n   - {}".format(wiki["pt"]))
+            print("\n\n     Acessar: {}".format(wiki["pt"]))
 
     def listar_ingredientes(formato="curto"):
         with open("ingredientes.json", "r") as fh:
