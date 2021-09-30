@@ -33,17 +33,17 @@ class Receita:
 class Ingredientes:
     def imprime_ingrediente(ingrediente, formato="curto"):
         # Versão simples
-        print(u"{}) {} [{}]".format(
+        print(u"{}) {} ({})".format(
                 ingrediente["id"],
                 ingrediente["nome"][0].capitalize(), 
-                ingrediente["formula"][1]
+                ingrediente["nome"][1].capitalize()
             ))
         # Versão completa
         if formato == "longo":
             # ou:
             if len(ingrediente["nome"]) > 1:
-                print("   ou: {}".format(
-                    ingrediente["nome"][1].capitalize()
+                print("   Fórmula: {}".format(
+                    T.Quimica.imprimir_formula(ingrediente["formula"][0])
                 ))
             # Temperatura de fusão
             temps_fusao = ingrediente["temperatura"]["fusao"]
@@ -67,7 +67,7 @@ class Ingredientes:
                         print("      a partir de:", end=" ")
                     else:
                         print("                  ", end=" ")
-                    print("- " + str(valores[0]), end="")
+                    print("- " + str(valores[0]), end=" ")
                 # Sistema (°C, °F ou K)
                 if t["sistema"] == "K":
                     print(t["sistema"], end="")
