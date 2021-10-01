@@ -33,18 +33,20 @@ class Receita:
 class Ingredientes:
     def imprime_ingrediente(ingrediente, formato="curto"):
         # Versão simples
-        print(u"{}) {} ({})".format(
+        print(u"{}) {}".format(
                 ingrediente["id"],
-                ingrediente["nome"][0].capitalize(), 
-                ingrediente["nome"][1].capitalize()
-            ))
+                ingrediente["nome"][0].capitalize()
+            ), end="")
+        if len(ingrediente["nome"]) > 1:
+            alternativos = ingrediente["nome"][:]
+            alternativos.pop(0)
+            print(" ({})".format(T.Texto.conectar(alternativos,", ")))
         # Versão completa
         if formato == "longo":
             # ou:
-            if len(ingrediente["nome"]) > 1:
-                print("   Fórmula: {}".format(
-                    T.Quimica.imprimir_formula(ingrediente["formula"][0])
-                ))
+            print("   Fórmula: {}".format(
+                T.Quimica.imprimir_formula(ingrediente["formula"][0])
+            ))
             # Temperatura de fusão
             temps_fusao = ingrediente["temperatura"]["fusao"]
             print("   - Temperatura de Fusão: ", end="")
@@ -96,7 +98,7 @@ class Ingredientes:
             else:
                 Ingredientes.imprime_ingrediente(ingrediente)
 
-Ingredientes.listar_ingredientes()
-print()
 Ingredientes.listar_ingredientes("longo")
+print()
+Ingredientes.listar_ingredientes()
 # Receita.le_receitas()
