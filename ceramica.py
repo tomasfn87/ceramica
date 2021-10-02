@@ -22,24 +22,56 @@ class Receita:
             and p.extend() <= 115
         receita = Receita(i, p)
     
-    def seleciona_ingredientes():
+    def listar_ingredientes(opcao=False):
         ingredientes = Ingrediente.acessar_ingredientes("r")
-        print("Selecione uma das opções:")
-        print("-------------------------")
-        print("  1) mostrar ingredientes")
-        print("  2) mostrar ingredientes (completo)")
-        opcao = input("    (Digite 'sair' para finalizar): ")
-        if opcao == "1":
+        if opcao == False:
+            return "Nenhuma opção selecionada."
+        # Opção "1"
+        elif opcao == "1":
             print()
             Ingrediente.listar_ingredientes()
+
+            print(
+                "\nDigite de o código (de 1 a {}) do ingrediente para mais \
+                     detalhes (ou digite 'voltar'):".format(
+                        len(ingredientes)
+                ), end=" "
+            )
+            detalhe = input()
+            if "1" <= detalhe <= str(len(ingredientes)):
+                print()
+                Ingrediente.imprime_ingrediente(
+                    ingredientes[int(detalhe) - 1], "longo"
+                )
+                print()
+                Receita.listar_ingredientes("1")
+            elif detalhe == "voltar":
+                print()
+                return Receita.selecionar_ingredientes()
+            else:
+                print("Opção inválida.")
+        # Opção "2"
         elif opcao == "2":
             print()
             Ingrediente.listar_ingredientes("longo")
+            print()
+            return Receita.selecionar_ingredientes()
+        # Opção "sair"
         elif opcao == "sair":
             print("\nFechando ingredientes.")
-            return
-        print()
-        return Receita.seleciona_ingredientes()
+            return ()
+        # Nenhuma das opções anteriores
+        else:
+            print("\nOpção inválida.")
+            print()
+            return Receita.selecionar_ingredientes()
+
+    def selecionar_ingredientes():
+        print("Selecione uma das opções:")
+        print("  1) mostrar ingredientes")
+        print("  2) mostrar ingredientes (completo)")
+        opcao = input("    (Digite 'sair' para finalizar): ")
+        Receita.listar_ingredientes(opcao)
 
     def calcula_receita(self, receita):
         print("Receita para 4,5 Kg")
@@ -116,4 +148,4 @@ class Ingrediente:
 print()
 Ingrediente.listar_ingredientes() """
 # Receita.le_receitas()
-Receita.seleciona_ingredientes()
+Receita.selecionar_ingredientes()
