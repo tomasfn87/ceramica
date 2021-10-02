@@ -6,17 +6,15 @@ class Receita:
         self.i = ingredientes
         self.p = porcentagens
     
-    def le_receitas(self):
-        with open("receitas.json", "r") as fh:
+    def acessar_receitas(self, mode="r"):
+        ingredientes = Ingredientes.acessar_ingredientes()
+        with open("receitas.json", mode) as fh:
             json_str = fh.read()
             json_value = json.loads(json_str)
         return json_value
 
     def nova_receita(self):
-        with open("receitas.json", "w") as fh:
-            json_str = fh.read()
-            json_value = json.loads(json_str)
-        receitas = json_value
+        receitas = Receita.acessar_receitas("w")
         # Receita.seleciona_ingredientes()
         i = [1, 2]
         p = [20, 80]
@@ -25,15 +23,36 @@ class Receita:
         receita = Receita(i, p)
     
     def seleciona_ingredientes():
-        Ingredientes.imprime_ingredientes()
+        ingredientes = Ingrediente.acessar_ingredientes("r")
+        print("Selecione uma das opções:")
+        print("-------------------------")
+        print("  1) mostrar ingredientes")
+        print("  2) mostrar ingredientes (completo)")
+        opcao = input("    (Digite 'sair' para finalizar): ")
+        if opcao == "1":
+            print()
+            Ingrediente.listar_ingredientes()
+        elif opcao == "2":
+            print()
+            Ingrediente.listar_ingredientes("longo")
+        elif opcao == "sair":
+            print("\nFechando ingredientes.")
+            return
+        print()
+        return Receita.seleciona_ingredientes()
 
     def calcula_receita(self, receita):
         print("Receita para 4,5 Kg")
 
-class Ingredientes:
+class Ingrediente:
+    def acessar_ingredientes(mode="r"):
+        with open("ingredientes.json", mode) as fh:
+            json_str = fh.read()
+        return json.loads(json_str)
+
     def imprime_ingrediente(ingrediente, formato="curto"):
         # Versão simples
-        print(u"{}) {}".format(
+        print("{}) {}".format(
                 ingrediente["id"],
                 ingrediente["nome"][0].capitalize()
             ), end="")
@@ -82,23 +101,19 @@ class Ingredientes:
             for w in wiki:
                 print("         - {}.wikipedia.org/{}".format(w, wiki[w]))
             
-
     def listar_ingredientes(formato="curto"):
-        with open("ingredientes.json", "r") as fh:
-            json_str = fh.read()
-            json_value = json.loads(json_str)
-        ingredientes = json_value
-        
+        ingredientes = Ingrediente.acessar_ingredientes()
         for i in range(0, len(ingredientes)):
             if i != 0 and formato == "longo":
                 print()
             ingrediente = ingredientes[i]
             if formato == "longo":
-                Ingredientes.imprime_ingrediente(ingrediente, "longo")
+                Ingrediente.imprime_ingrediente(ingrediente, "longo")
             else:
-                Ingredientes.imprime_ingrediente(ingrediente)
+                Ingrediente.imprime_ingrediente(ingrediente)
 
-Ingredientes.listar_ingredientes("longo")
+""" Ingrediente.listar_ingredientes("longo")
 print()
-Ingredientes.listar_ingredientes()
+Ingrediente.listar_ingredientes() """
 # Receita.le_receitas()
+Receita.seleciona_ingredientes()
