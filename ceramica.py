@@ -1,3 +1,4 @@
+# CGJS-TVN6-2NUP-LS57-3HC5
 import json
 import texto as T
 
@@ -30,26 +31,8 @@ class Receita:
         elif opcao == "1":
             print()
             Ingrediente.listar_ingredientes()
-
-            print(
-                "\nDigite de o código (de 1 a {}) do ingrediente para mais \
-                     detalhes (ou digite 'voltar'):".format(
-                        len(ingredientes)
-                ), end=" "
-            )
-            detalhe = input()
-            if "1" <= detalhe <= str(len(ingredientes)):
-                print()
-                Ingrediente.imprime_ingrediente(
-                    ingredientes[int(detalhe) - 1], "longo"
-                )
-                print()
-                Receita.listar_ingredientes("1")
-            elif detalhe == "voltar":
-                print()
-                return Receita.selecionar_ingredientes()
-            else:
-                print("Opção inválida.")
+            Ingrediente.detalhar_ingrediente(ingredientes)
+                
         # Opção "2"
         elif opcao == "2":
             print()
@@ -133,6 +116,26 @@ class Ingrediente:
             for w in wiki:
                 print("         - {}.wikipedia.org/{}".format(w, wiki[w]))
             
+    def detalhar_ingrediente(ingredientes):
+            print("\nDigite o código do ingrediente (1 a {}) ".format(
+                len(ingredientes)
+            ), end="")
+            print("para mais detalhes (ou digite 'voltar'):", end=" ")
+            detalhe = input()
+            if "1" <= detalhe <= str(len(ingredientes)):
+                print()
+                Ingrediente.imprime_ingrediente(
+                    ingredientes[int(detalhe) - 1], "longo"
+                )
+                print()
+                Receita.listar_ingredientes("1")
+            elif detalhe == "voltar":
+                print()
+                return Receita.selecionar_ingredientes()
+            else:
+                print("\nOpção inválida. Selecione novamente:")
+                return Ingrediente.detalhar_ingrediente(ingredientes)
+
     def listar_ingredientes(formato="curto"):
         ingredientes = Ingrediente.acessar_ingredientes()
         for i in range(0, len(ingredientes)):
