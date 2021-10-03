@@ -1,7 +1,7 @@
 [
     {
         "id": 1, 
-        "nome": "Esmalte básico para 1240 °C",
+        "nome": "Transparente alta (1200-1240 °C)",
         "ingredientes": [
             {
                 "id":4,
@@ -20,7 +20,5 @@
                 "valor": 10
             }
         ]
-        
-        
     }
 ]
