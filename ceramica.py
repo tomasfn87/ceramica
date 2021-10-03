@@ -40,7 +40,7 @@ class Receita:
             print()
             return Receita.selecionar_ingredientes()
         # Opção "sair"
-        elif opcao == "sair":
+        elif opcao in ["s", "S", "sair", "Sair"]:
             print("\nFechando ingredientes.")
             return ()
         # Nenhuma das opções anteriores
@@ -53,8 +53,12 @@ class Receita:
         print("Selecione uma das opções:")
         print("  1) mostrar ingredientes")
         print("  2) mostrar ingredientes (completo)")
-        opcao = input("    (Digite 'sair' para finalizar): ")
-        Receita.listar_ingredientes(opcao)
+        opcao = input("    (Digite [s]air' para finalizar): ")
+        if opcao in ["1", "2", "s", "S", "sair", "Sair"]:
+            return Receita.listar_ingredientes(opcao)
+        else:
+            print("Opção inválida\n")
+            return Receita.selecionar_ingredientes()
 
     def calcula_receita(self, receita):
         print("Receita para 4,5 Kg")
@@ -120,7 +124,7 @@ class Ingrediente:
             print("\nDigite o código do ingrediente (1 a {}) ".format(
                 len(ingredientes)
             ), end="")
-            print("para mais detalhes (ou digite 'voltar'):", end=" ")
+            print("para mais detalhes (ou digite [v]oltar):", end=" ")
             detalhe = input()
             if "1" <= detalhe <= str(len(ingredientes)):
                 print()
@@ -129,7 +133,7 @@ class Ingrediente:
                 )
                 print()
                 Receita.listar_ingredientes("1")
-            elif detalhe == "voltar":
+            elif detalhe in ["v", "V", "voltar", "Voltar"]:
                 print()
                 return Receita.selecionar_ingredientes()
             else:
