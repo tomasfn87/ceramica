@@ -55,10 +55,15 @@ class Receita:
         print("  2) mostrar ingredientes (completo)")
         opcao = input("    (Digite [s]air' para finalizar): ")
         if opcao in ["1", "2", "s", "S", "sair", "Sair"]:
-            return Receita.listar_ingredientes(opcao)
+            Receita.listar_ingredientes(opcao)
         else:
             print("Opção inválida\n")
-            return Receita.selecionar_ingredientes()
+            Receita.selecionar_ingredientes()
+    
+    def definir_valores():
+        # Após selecionados os ingredientes, será atribuído valor a 
+        # cada ingrediente: um inteiro que corresponde a %.
+        return
 
     def calcula_receita(self, receita):
         print("Receita para 4,5 Kg")
