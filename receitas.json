@@ -2,21 +2,21 @@
     {
         "id": 1, 
         "nome": "Esmalte básico para 1240 °C",
-        "receita": [
+        "ingredientes": [
             {
-                "ingrediente":4,
+                "id":4,
                 "valor": 40
             },
             {
-                "ingrediente":1,
+                "id":1,
                 "valor": 30
             },
             {
-                "ingrediente":2,
+                "id":2,
                 "valor": 20
             },
             {
-                "ingrediente":5,
+                "id":5,
                 "valor": 10
             }
         ]
