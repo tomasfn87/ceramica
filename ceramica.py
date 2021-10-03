@@ -25,14 +25,14 @@ class Receita:
         receita = Receita(i, p)
     
     def listar_ingredientes(opcao=False):
-        ingredientes = Ingrediente.acessar_ingredientes("r")
+        ingredientes = Ingrediente.acessar_ingredientes()
         if opcao == False:
             return "Nenhuma opção selecionada."
         # Opção "1"
         elif opcao == "1":
             print()
             Ingrediente.listar_ingredientes()
-            Ingrediente.detalhar_ingrediente(ingredientes)
+            return Ingrediente.detalhar_ingrediente(ingredientes)
         # Opção "2"
         elif opcao == "2":
             print()
@@ -42,7 +42,7 @@ class Receita:
         # Opção "sair"
         elif opcao in ["s", "S", "sair", "Sair"]:
             print("\nFechando ingredientes.")
-            return ()
+            return
         # Nenhuma das opções anteriores
         else:
             print("\nOpção inválida.")
@@ -132,7 +132,7 @@ class Ingrediente:
                     ingredientes[int(detalhe) - 1], "longo"
                 )
                 print()
-                Receita.listar_ingredientes("1")
+                return Receita.listar_ingredientes("1")
             elif detalhe in ["v", "V", "voltar", "Voltar"]:
                 print()
                 return Receita.selecionar_ingredientes()
