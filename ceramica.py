@@ -1,20 +1,21 @@
 # CGJS-TVN6-2NUP-LS57-3HC5
 import json
-import texto as T
+from texto import Texto as T
+from texto import Quimica as Q
 
 class Receita:
     def __init__(self, ingredientes, porcentagens):
         self.i = ingredientes
         self.p = porcentagens
     
-    def acessar_receitas(self, mode="r"):
+    def acessar_receitas(mode="r"):
         ingredientes = Ingredientes.acessar_ingredientes()
         with open("receitas.json", mode) as fh:
             json_str = fh.read()
             json_value = json.loads(json_str)
         return json_value
 
-    def nova_receita(self):
+    def nova_receita():
         receitas = Receita.acessar_receitas("w")
         # Receita.seleciona_ingredientes()
         i = [1, 2]
@@ -32,7 +33,6 @@ class Receita:
             print()
             Ingrediente.listar_ingredientes()
             Ingrediente.detalhar_ingrediente(ingredientes)
-                
         # Opção "2"
         elif opcao == "2":
             print()
@@ -74,12 +74,12 @@ class Ingrediente:
         if len(ingrediente["nome"]) > 1:
             alternativos = ingrediente["nome"][:]
             alternativos.pop(0)
-            print(" ({})".format(T.Texto.conectar(alternativos,", ")))
+            print(" ({})".format(T.conectar(alternativos,", ")))
         # Versão completa
         if formato == "longo":
             # ou:
             print("   Fórmula: {}".format(
-                T.Quimica.imprimir_formula(ingrediente["formula"][0])
+                Q.imprimir_formula(ingrediente["formula"][0])
             ))
             # Temperatura de fusão
             temps_fusao = ingrediente["temperatura"]["fusao"]
