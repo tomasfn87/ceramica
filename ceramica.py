@@ -114,10 +114,7 @@ class Ingrediente:
                         print("                          ", end=" ")
                     print("- " + str(valores[0]), end=" ")
                 # Sistema (°C, °F ou K)
-                if t["sistema"] == "K":
-                    print(t["sistema"], end="")
-                else:
-                    print(t["sistema"], end=", ")
+                print(t["sistema"], end="")
                 id_valor += 1
             # Wikipedia URL
             wiki = ingrediente["wiki"]
