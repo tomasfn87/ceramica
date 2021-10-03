@@ -2,7 +2,25 @@
     {
         "id": 1, 
         "nome": "Esmalte básico para 1240 °C",
-        [4, 1, 2, 5], // ids dos ingredientes
-        [40, 30, 20, 10]  // porcentagem de cada ingrediente, na ordem
+        "receita": [
+            {
+                "ingrediente":4,
+                "valor": 40
+            },
+            {
+                "ingrediente":1,
+                "valor": 30
+            },
+            {
+                "ingrediente":2,
+                "valor": 20
+            },
+            {
+                "ingrediente":5,
+                "valor": 10
+            }
+        ]
+        
+        
     }
 ]
