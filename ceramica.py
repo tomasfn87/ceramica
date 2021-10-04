@@ -133,7 +133,6 @@ class Ingrediente:
                 Ingrediente.imprime_ingrediente(
                     ingredientes[int(detalhe) - 1], "longo"
                 )
-                print()
                 return Receita.listar_ingredientes("1")
             elif detalhe in ["v", "V", "voltar", "Voltar"]:
                 print()
