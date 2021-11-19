@@ -1,0 +1,191 @@
+[
+    {
+        "id": 1,
+        "nome": [
+            "quartzo",
+            "sílica",
+            "cristal de rocha"
+        ],
+        "formula": [
+            "SiO2"
+        ],
+        "temperatura": {
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1710
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        3110
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1983
+                    ]
+                }
+            ]
+        },
+        "wiki": {
+            "pt": "Quartzo",
+            "en": "Quartz"
+        }
+        
+    },
+    {
+        "id": 2,
+        "nome": [
+            "carbonato de cálcio",
+            "calcita",
+            "aragonita"
+        ],
+        "formula": [
+            "CaCO3"
+        ],
+        "temperatura": {
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1339
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        2442
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1612
+                    ]
+                }
+            ]
+        },
+        "wiki": {
+            "pt": "Carbonato_de_cálcio",
+            "en": "Calcium_carbonate"
+        }
+    },
+    {
+        "id": 3,
+        "nome": [
+            "albita",
+            "feldspato sódico"
+        ],
+        "formula": [
+            "NaAlSi3O8"
+        ],
+        "temperatura": {
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1100,
+                        1120
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        2012,
+                        2048
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1373,
+                        1393
+                    ]
+                }
+            ]
+        },
+        "wiki": {
+            "pt": "Albita",
+            "en": "Albite"
+        }
+    },
+    {
+        "id": 4,
+        "nome": [
+            "feldspato",
+            "feldspato potássico"
+        ],
+        "formula": [
+            "KAlSi3O8"
+        ],
+        "temperatura": {
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1200,
+                        1250
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        2192,
+                        2282
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        1473,
+                        1523
+                    ]
+                }
+            ]
+        },
+        "wiki": {
+            "pt": "Feldspato",
+            "en": "Feldspar"
+        }
+    },
+    {
+        "id": 5,
+        "nome": [
+            "caulim",
+            "caulinita"
+        ],
+        "formula": [
+            "Al2Si2O5(OH)4"
+        ],
+        "temperatura": {
+            "fusao": [
+                {
+                    "sistema": "°C",
+                    "valor": [
+                        1770
+                    ]
+                },
+                {
+                    "sistema": "°F",
+                    "valor": [
+                        3218
+                    ]
+                },
+                {
+                    "sistema": "K",
+                    "valor": [
+                        2043
+                    ]
+                }
+            ]
+        },
+        "wiki": {
+            "pt": "Caulinita",
+            "en": "Kaolinite"
+        }
+    }
+]
