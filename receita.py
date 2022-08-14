@@ -12,7 +12,7 @@ class Receita:
         self.ingredientes = []
     
     def __repr__(self):
-        repr = f'Nome: {self.nome.capitalize()}'
+        repr = f'Nome: {self.nome.capitalize()} ({self.temperatura}°C)'
         if self.ingredientes:
             for i in self.ingredientes:
                 repr += f'\n - Material: {i.nome.capitalize()}, peso: {"{:.0f}".format(i.peso)}{self.unidade}'
@@ -51,7 +51,7 @@ class Receita:
     
     def calcular_novo_peso(self, novo_peso):
         fator = novo_peso / self.peso_total()
-        peso_calculado = f'Novo peso ({novo_peso}{self.unidade}) para {self.nome.capitalize()}'
+        peso_calculado = f'Novo peso ({novo_peso}{self.unidade}) para {self.nome.capitalize()} ({self.temperatura}°C)'
         if self.ingredientes:
             for i in self.ingredientes:
                 peso_calculado += f'\n - Material: {i.nome.capitalize()}, peso: {"{:.0f}".format(i.peso*fator)}{self.unidade}'
