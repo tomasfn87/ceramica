@@ -2,3 +2,5 @@ __pycache__/
 .vscode/
 systemctl
 receitas/
+*node_modules*
+*dist*
